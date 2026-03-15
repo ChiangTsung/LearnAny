@@ -1,0 +1,7 @@
+interface:
+  display_name: "Web Learning Coach"
+  short_description: "Track web-coding knowledge gaps and teach them"
+  default_prompt: "Use $web-learning-coach to track the coding concepts I keep missing, rank what I should learn next, and build lesson plans with exercises."
+
+policy:
+  allow_implicit_invocation: true
