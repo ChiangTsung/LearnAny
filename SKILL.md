@@ -62,13 +62,13 @@ Add only prerequisites that are genuinely likely missing for this user. Avoid ex
 Before creating a new concept, inspect the registry:
 
 ```bash
-python3 web-learning-coach/scripts/knowledge_registry.py list --unresolved-only --format json
+python3 scripts/knowledge_registry.py list --unresolved-only --format json
 ```
 
 Then merge new findings with:
 
 ```bash
-python3 web-learning-coach/scripts/knowledge_registry.py upsert --input /tmp/concepts.json
+python3 scripts/knowledge_registry.py upsert --input /tmp/concepts.json
 ```
 
 Use the same concept when the title, alias, or very close wording already exists. If a near-duplicate exists, update the existing record instead of creating a new one.
@@ -117,7 +117,7 @@ When the user asks for teaching material, browse authoritative sources first. Pr
 Then create a lesson JSON payload and render it:
 
 ```bash
-python3 web-learning-coach/scripts/knowledge_registry.py render-lesson --slug <concept-slug> --input /tmp/lesson.json
+python3 scripts/knowledge_registry.py render-lesson --slug <concept-slug> --input /tmp/lesson.json
 ```
 
 Each lesson should include:
@@ -145,7 +145,7 @@ When the user asks questions like:
 Run:
 
 ```bash
-python3 web-learning-coach/scripts/knowledge_registry.py today --top 5
+python3 scripts/knowledge_registry.py today --top 5
 ```
 
 Use the top result as the main recommendation. Explain:
